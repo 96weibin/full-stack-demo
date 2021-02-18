@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "capcha model serve",
+  "main": "index.js",
+  "author": "weibin",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-convert": "^2.0.0",
+    "koa-helmet": "^6.0.0",
+    "koa-router": "^10.0.0",
+    "koa-static-cache": "^5.1.4",
+    "mongoose": "^5.11.17",
+    "nodemailer": "^6.4.18",
+    "saslprep": "^1.0.3",
+    "svg-captcha": "^1.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
