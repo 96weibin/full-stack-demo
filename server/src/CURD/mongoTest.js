@@ -7,13 +7,6 @@ let addUser = async(user)=>{
     let res = await aUser.save()
     console.log(res)
 }
-
-let user1 = {
-    name:'weibin',
-    age:17,
-    sex:1,
-    msg:'世界真美好'
-};
 // addUser(user1)
 
 
@@ -24,7 +17,7 @@ let deleteOneUser = async(user)=>{
     })
     console.log(res)
 }
-deleteOneUser()
+// deleteOneUser()
 //修改
 let mudateOneUser = async()=>{
     let res = await usersModel.updateOne({

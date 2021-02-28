@@ -5,9 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    a:'112'
+    sid:'',
+    activeName:'login'
   },
   mutations: {
+    setSid(state,arg){
+      state.sid = arg
+    },
+    setActiveName(state,arg){
+      state.activeName = arg
+    }
   },
   actions: {
   },

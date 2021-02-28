@@ -1,9 +1,9 @@
 const koaCombineRouters = require('koa-combine-routers')
-const captchApi = require('../api/captcha')
-const emailApi = require('../api/email')
+const loginApi = require('../api/loginApi')
+const regApi = require('../api/regApi')
 
 const router = koaCombineRouters(
-    captchApi,  //验证码
-    emailApi    //邮件
+    ...loginApi,
+    ...regApi
 )
 module.exports = router

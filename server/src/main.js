@@ -4,7 +4,11 @@ const cors = require('@koa/cors')
 const koaBody = require('koa-body')
 const koaStaticCache = require('koa-static-cache')
 const path = require('path')
+const koaJwt = require('koa-jwt');
+const jwtError = require('./lib/jwtError')
+const jsonWebToken = require('jsonwebtoken')
 
+const mainConfig = require('./conf/mainConfig')
 const globalTry = require('./lib/globalTry')
 const router = require('./routers')
 let app = new koa();
@@ -18,9 +22,11 @@ app
         gzip:true
     }))
     .use(cors({
-        origin:'http://localhost:8080'
+        origin:mainConfig.feOrigin
     }))
-    .use(router())
+    .use(jwtError)                  //jwt 错误处理函数
+    .use(koaJwt({sercet:mainConfig.jwtSecret}).unless({path:[/^\/public/]}))       //公共路径 不需要验证token
+    .use(router())                             
 
 let port = 8090;
 app.listen(port);

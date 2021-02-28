@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+    <div id="app">
+        <router-link to="foo">test1</router-link>
+        <router-link to="bar">test2</router-link>
+        <router-view></router-view>
+    </div>
+    
+    <script>
+
+        const Foo = { template: '<div>foo</div>' }
+        const Bar = { template: '<div>bar</div>' }
+
+        const routes = [
+            { path: '/foo', component: Foo },
+            { path: '/bar', component: Bar }
+        ]
+        const router = new VueRouter({
+            routes // (缩写) 相当于 routes: routes
+        })
+        let app = new Vue({
+            el:'#app',
+            router
+        })
+    </script>
+</body>
+</html>

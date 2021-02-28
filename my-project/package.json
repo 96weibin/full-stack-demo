@@ -13,6 +13,7 @@
     "element-ui": "^2.15.0",
     "nodemailer": "^6.4.18",
     "register-service-worker": "^1.7.1",
+    "uuid": "^8.3.2",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

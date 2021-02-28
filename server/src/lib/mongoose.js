@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const dbConfig = require('../conf/dbConfig');
 
 
-mongoose.connect(dbConfig.DB_URLL +'/test', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(dbConfig.DB_URLL +'/test' + '?authSource=admin', {useNewUrlParser: true, useUnifiedTopology: true});
 
 mongoose.connection.on('connected',()=>{
     console.log('mongodb 链接成功')

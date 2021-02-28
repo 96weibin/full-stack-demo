@@ -6,7 +6,7 @@ const MongoClient = require('mongodb').MongoClient;
 (async ()=>{
     let client = await MongoClient.connect(dbConfig.DB_URLL,{ useUnifiedTopology: true });
     let db = client.db('test')
-    let data = await (await db.collection('cats').find({})).toArray()
+    let data = await (await db.collection('users').find({username:'test'})).toArray()
     
     app.use(async ctx=>{
         ctx.body = data
