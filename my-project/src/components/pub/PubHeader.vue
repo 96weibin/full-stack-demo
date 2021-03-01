@@ -17,7 +17,8 @@
         <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
       <el-menu-item index="3">
-        <a href="./Login" target="_blank">登录-TEST</a>
+        <router-link to="./login" >登录</router-link>
+        <!-- <a href="" target="_blank">登录-TEST</a> -->
       </el-menu-item>
       <span>未登录 首页自动跳转到 Login
         登录了则不能跳转到login 
