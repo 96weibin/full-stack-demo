@@ -70,8 +70,5 @@
     - koa-jwt    配合 router 对路由进行  token验证保护
     - jsonwebtoken   生成、解析token
 
-5. mongo
 
-
-
-
+*** CONF 文件夹 通过ftp文件上传，不存储git ***
