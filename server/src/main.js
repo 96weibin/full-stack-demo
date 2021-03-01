@@ -28,6 +28,6 @@ app
     .use(koaJwt({sercet:mainConfig.jwtSecret}).unless({path:[/^\/public/]}))       //公共路径 不需要验证token
     .use(router())                             
 
-let port = 8090;
+let port = 8888;
 app.listen(port);
 console.log(`listen to ${port}`)

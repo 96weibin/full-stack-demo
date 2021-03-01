@@ -2,7 +2,7 @@ const axios = require('axios');
 const errorHandler = require('./errorHandler')
 
 const instance = axios.create({
-  baseURL: 'http://192.168.1.230:8090',
+  baseURL: 'http://192.168.1.230:8888',
   timeout: 10000,
 });
 // 添加请求拦截器

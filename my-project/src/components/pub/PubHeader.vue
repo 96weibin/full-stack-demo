@@ -19,9 +19,11 @@
       <el-menu-item index="3">
         <a href="./Login" target="_blank">登录-TEST</a>
       </el-menu-item>
-      未登录 首页自动跳转到 Login <br>
-      登录了则不能跳转到login  
-      <el-menu-item style="float:left" index="4" v-if="allredyLogin">登出</el-menu-item>
+      <span>未登录 首页自动跳转到 Login
+        登录了则不能跳转到login 
+      </span>
+       
+      <el-menu-item style="float:right" index="4" v-if="allredyLogin">登出</el-menu-item>
     </el-menu>
   </div>
 </template>
